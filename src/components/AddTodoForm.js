@@ -14,6 +14,7 @@ class AddTodoForm extends Component {
 
   submitForm = (e) => {
     e.preventDefault()
+    this.props.addToDo(this.state.todo)
     this.setState({ todo: '' });
   }
 
@@ -31,5 +32,9 @@ class AddTodoForm extends Component {
     )
   }
 }
+
+const mapDispatchToProps = dispatch => ({
+  addToDo: text => dispatch( addToDo(text) )
+})
 
 export default AddTodoForm;
