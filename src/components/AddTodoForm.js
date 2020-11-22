@@ -37,4 +37,4 @@ const mapDispatchToProps = dispatch => ({
   addToDo: text => dispatch( addToDo(text) )
 })
 
-export default AddTodoForm;
+export default connect(null, mapDispatchToProps)(AddTodoForm);
